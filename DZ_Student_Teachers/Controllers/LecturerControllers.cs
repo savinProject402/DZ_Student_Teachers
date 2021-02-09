@@ -1,11 +1,7 @@
-﻿using DZ_Student_Teachers.Domain.Services;
+﻿using DZ_Student_Teachers.Domain.Models;
+using DZ_Student_Teachers.Domain.Services;
 using DZ_Student_Teachers.Models;
-using DZ_Student_Teachers.Domain.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DZ_Student_Teachers.Controllers
 {
@@ -34,7 +30,7 @@ namespace DZ_Student_Teachers.Controllers
         }
         public LecturerViewModel Create(LecturerPostModel model)
         {
-            if (model.Name.Contains (" "))
+            if (model.Name.Contains(" "))
             {
                 return new LecturerViewModel { Name = "Tut Name LecturerViewModel (P_Layer) error", Surname = "Tut Surname LecturerViewModel (P_Layer) error" };
             }

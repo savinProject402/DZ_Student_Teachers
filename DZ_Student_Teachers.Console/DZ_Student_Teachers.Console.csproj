@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3BBDEA62-7FE0-40DE-9607-AF54CE2B7068}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DZ_Student_Teachers.Console</RootNamespace>
     <AssemblyName>DZ_Student_Teachers.Console</AssemblyName>
@@ -30,6 +30,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DZ_Student_Teachers.Console.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -41,7 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DZ_Student_Teachers.Data\DZ_Student_Teachers.Data.csproj">
+      <Project>{e8b67717-3c81-46a6-82b9-8fa85972c0d6}</Project>
+      <Name>DZ_Student_Teachers.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZ_Student_Teachers.Domain\DZ_Student_Teachers.Domain.csproj">
+      <Project>{a53005c3-3163-4a24-934f-c9c7c2f6b6fb}</Project>
+      <Name>DZ_Student_Teachers.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZ_Student_Teachers\DZ_Student_Teachers.csproj">
+      <Project>{d006197b-8270-4079-84f9-d10f0db43167}</Project>
+      <Name>DZ_Student_Teachers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

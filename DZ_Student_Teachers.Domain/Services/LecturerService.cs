@@ -2,21 +2,17 @@
 using DZ_Student_Teachers.Data.Repositories.Interfaces;
 using DZ_Student_Teachers.Domain.Models;
 using DZ_Student_Teachers.Domain.Services.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DZ_Student_Teachers.Domain.Services
 {
-   public class LecturerService : ILecturerService
+    public class LecturerService : ILecturerService
     {
         private readonly ILecturerRepository _lecturerRepository;
-        public LecturerService (ILecturerRepository lecturerRepository)
+        public LecturerService(ILecturerRepository lecturerRepository)
         {
             _lecturerRepository = lecturerRepository;
-        } 
+        }
         public LecturerModel Create(LecturerModel model)
         {
             if (int.TryParse(model.Name, out int res))
@@ -28,7 +24,7 @@ namespace DZ_Student_Teachers.Domain.Services
                 Name = model.Name,
                 Surname = model.Surname,
             };
-            _lecturerRepository.Create(lecturer);
+            //_lecturerRepository.Create(lecturer);
             model.Id = lecturer.Id;
             return model;
 
