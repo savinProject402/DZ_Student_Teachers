@@ -43,13 +43,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\TeacherViewModel.cs" />
+    <Compile Include="Controllers\LecturerControllers.cs" />
+    <Compile Include="Controllers\StudentsControllers.cs" />
+    <Compile Include="Models\LecturerPostModel.cs" />
+    <Compile Include="Models\LecturerViewModel.cs" />
+    <Compile Include="Models\StudentsPostModel.cs" />
+    <Compile Include="Models\StudentsViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DZ_Student_Teachers.Console\DZ_Student_Teachers.Console.csproj">
+      <Project>{3bbdea62-7fe0-40de-9607-af54ce2b7068}</Project>
+      <Name>DZ_Student_Teachers.Console</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZ_Student_Teachers.Data\DZ_Student_Teachers.Data.csproj">
+      <Project>{e8b67717-3c81-46a6-82b9-8fa85972c0d6}</Project>
+      <Name>DZ_Student_Teachers.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZ_Student_Teachers.Domain\DZ_Student_Teachers.Domain.csproj">
+      <Project>{a53005c3-3163-4a24-934f-c9c7c2f6b6fb}</Project>
+      <Name>DZ_Student_Teachers.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DZ_Student_Teachers.Models
 {
-    class TeacherViewModel
+   public class LecturerPostModel
     {
+        public string Name { get; set; }
+        public string Surname { get; set; }
     }
 }
